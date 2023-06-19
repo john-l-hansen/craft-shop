@@ -117,7 +117,7 @@ export default function Snackbars(){
             with action
             </div>
             <button
-            className="dark:text-gray-300  py-1.5 px-2.5 flex justify-center items-center rounded-lg font-medium leading-5 text-sm text-gray-900 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
+            className="dark:text-gray-300 py-1.5 px-2.5 flex justify-center items-center rounded-lg font-medium leading-5 text-sm text-gray-900 dark:hover:text-gray-800 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
             Action
             </button>
             </div>
