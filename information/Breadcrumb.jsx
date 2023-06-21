@@ -1,332 +1,245 @@
-import React, { Component, useState } from 'react'
+import React, { Component, useState } from 'react' 
 import PreviewWindowDisabled from '../PreviewWindowDisabled'
 
-export default function Breadcrumb() {
-  const [breadcrumbState, setBreadcrumbState] = useState({
-    showColor: false,
-    selectedColor: 'bg-blue-100',
-    selectedFont: 'font-helvetica',
-  })
+export default function Tooltip(){
+    const [tooltipState, setTooltipState] = useState({
+        showColor: false,
+        selectedColor:"bg-blue-100",
+        selectedFont:"font-helvetica",
+     });
 
-  const toggleColor = (e) => {
-    e.preventDefault()
+    const toggleColor = (e) => {
+        e.preventDefault();
 
-    setBreadcrumbState({
-      ...breadcrumbState,
-      showColor: !breadcrumbState.showColor,
-    })
-  }
+        setTooltipState({
+            ...tooltipState,
+            showColor:!tooltipState.showColor,
+        })
+       
+    }
 
-  const changeColor = (e) => {
-    e.preventDefault()
-    //consdive.log(e.target.classdivst.value)
-    setBreadcrumbState({
-      ...breadcrumbState,
-      showColor: !breadcrumbState.showColor,
-      selectedColor: e.target.classlist[3],
-    })
-  }
+     const changeColor = (e) => {
+        e.preventDefault();
+        //console.log(e.target.classList.value)
+        setTooltipState({
+            ...tooltipState,
+            showColor:!tooltipState.showColor,
+            selectedColor: e.target.classList[3],
+        })
+     
+    }
 
-  const changeFont = (e) => {
-    e.preventDefault()
-    setBreadcrumbState({
-      ...breadcrumbState,
-      selectedFont: e.target.value,
-    })
-  }
+    const changeFont = (e) => {
+        e.preventDefault();
+        setTooltipState({
+            ...tooltipState,
+            selectedFont: e.target.value,
+        })
+    }
 
-  let breadcrumbComp = (
-    <div>
-      <nav className={"w-full rounded-md " + breadcrumbState.selectedFont}>
-        <div className="flex">
-          <div className="text-neutral-500">Breadcrumb 1</div>
+
+    let tooltipComp = (
+        <div>
+
+        <div className="flex space-x-8">
+            <div className="relative bg-gray-100 px-3 py-2 rounded-lg">
+            <div className="text-gray-800 text-sm">
+                <div className={tooltipState.selectedFont}>Tooltip</div>
+            </div>
+            <div className="absolute right-0 rounded-[2px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-100"></div>
+            </div>
+
+            <div className="relative bg-gray-100 px-3 py-2 rounded-lg">
+            <div className="text-gray-800 text-sm">
+                <div className={tooltipState.selectedFont}>Tooltip</div>
+            </div>
+            <div className="absolute bottom-0 left-1/2 rounded-[2px] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-100"></div>
+            </div>
+
+            <div className="relative bg-gray-100 px-3 py-2 rounded-lg">
+            <div className="text-gray-800 text-sm">
+                <div className={tooltipState.selectedFont}>Tooltip</div>
+            </div>
+            <div className="absolute left-0 top-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-100"></div>
+            </div>
+
+            <div className="relative bg-gray-100 px-3 py-2 rounded-lg">
+            <div className="text-gray-800 text-sm">
+                <div className={tooltipState.selectedFont}>Tooltip</div>
+            </div>
+            <div className="absolute top-0 left-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-100"></div>
+            </div>
         </div>
-      </nav>
+        <br></br>
+        <div className="flex space-x-8">
+            <div className="relative bg-gray-800 px-3 py-2 rounded-lg" style={{"filter": "drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));"}}>
+            <div className="text-white text-sm">
+                <div>Tooltip</div>
+            </div>
+            <div className="absolute right-0 rounded-[2px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>
+            </div>
 
-      <nav className={"w-full rounded-md " + breadcrumbState.selectedFont}>
-        <div className="flex">
-          <div>
-            <a href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900">
-              Breadcrumb 1
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-gray-400">{'>'}</span>
-          </div>
-          <div className="text-neutral-500">Breadcrumb 2</div>
+            <div className="relative bg-gray-800 px-3 py-2 rounded-lg" style={{"filter": "drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));"}}>
+            <div className="text-white text-sm">
+            <div>Tooltip</div>
+            </div>
+            <div className="absolute bottom-0 left-1/2 rounded-[2px] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>
+            </div>
+
+            <div className="relative bg-gray-800 px-3 py-2 rounded-lg" style={{"filter": "drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));"}}>
+            <div className="text-white text-sm">
+            <div>Tooltip</div>
+            </div>
+            <div className="absolute left-0 top-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>
+            </div>
+        
+            <div className="relative bg-gray-800 px-3 py-2 rounded-lg" style={{"filter": "drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));"}}>
+            <div className="text-white text-sm">
+            <div>Tooltip</div>
+            </div>
+            <div className="absolute top-0 left-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>
+            </div>
         </div>
-      </nav>
+        <br></br>
+        <div className="flex space-x-8">
+            <div className="relative bg-white px-3 py-2 rounded-lg" style={{"filter": "drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));"}}>
+                <div className="text-gray-900 text-sm">
+                <div>Tooltip</div>
+                </div>
+                <div className="absolute right-0 rounded-[2px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-white" ></div>
+                </div>
 
-      <nav className={"w-full rounded-md " + breadcrumbState.selectedFont}>
-        <div className="flex">
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900">
-              Breadcrumb 1
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-neutral-500">{'>'}</span>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"
-            >
-              Breadcrumb 2
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-gray-400">{'>'}</span>
-          </div>
-          <div className="text-gray-500">Breadcrumb 3</div>
+            <div className="relative bg-white px-3 py-2 rounded-lg" style={{"filter": "drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));"}}>
+                <div className="text-gray-900 text-sm">
+                <div>Tooltip</div>
+                </div>
+                <div className="absolute bottom-0 left-1/2 rounded-[2px] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-white"></div>
+                </div>
+
+                <div className="relative bg-white px-3 py-2 rounded-lg" style={{"filter": "drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));"}}>
+                <div className="text-gray-900 text-sm">
+                <div>Tooltip</div>
+                </div>
+                <div className="absolute left-0 top-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-white"></div>
+                </div>
+
+            <div className="relative bg-white px-3 py-2 rounded-lg" style={{"filter": "drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));"}}>
+                <div className="text-gray-900 text-sm">
+                <div>Tooltip</div>
+                </div>
+                <div className="absolute top-0 left-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-white"></div>
+            </div>
         </div>
-      </nav>
 
-      <nav className={"w-full rounded-md " + breadcrumbState.selectedFont}>
-        <div className="divst-reset flex">
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"
-            >
-              Breadcrumb 1
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-neutral-500">{'>'}</span>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"
-            >
-              Breadcrumb 2
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-gray-400">{'>'}</span>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"
-            >
-              Breadcrumb 3
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-gray-400">{'>'}</span>
-          </div>
 
-          <div className="text-gray-500">Breadcrumb 4</div>
+
         </div>
-      </nav>
+           
+    )
 
-      <nav className={"w-full rounded-md " + breadcrumbState.selectedFont}>
-        <div className="flex">
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"
-            >
-              Breadcrumb 1
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-neutral-500">{'>'}</span>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"
-            >
-              Breadcrumb 2
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-gray-400">{'>'}</span>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"
-            >
-              Breadcrumb 3
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-gray-400">{'>'}</span>
-          </div>
-          <div>
-            <a
-              href="#"
-              className="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"
-            >
-              Breadcrumb 4
-            </a>
-          </div>
-          <div>
-            <span className="mx-2 text-gray-400">{'>'}</span>
-          </div>
-          <div className="text-gray-500">Breadcrumb 5</div>
-        </div>
-      </nav>
-    </div>
-  )
+        let tooltipCompString = '<div class="flex space-x-8">\n'+
+        '\n'+
+        '            <div class="relative bg-gray-100 px-3 py-2 rounded-lg">\n'+
+        '            <div class="text-gray-800 text-sm">\n'+
+        '                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+        '            </div>\n'+
+        '            <div class="absolute right-0 rounded-[2px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-100"></div>\n'+
+        '            </div>\n'+
+        '\n'+
+        '            <div class="relative bg-gray-100 px-3 py-2 rounded-lg">\n'+
+        '            <div class="text-gray-800 text-sm">\n'+
+        '                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+        '            </div>\n'+
+        '            <div class="absolute bottom-0 left-1/2 rounded-[2px] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-100"></div>\n'+
+        '            </div>\n'+
+        '\n'+
+        '            <div class="relative bg-gray-100 px-3 py-2 rounded-lg">\n'+
+        '            <div class="text-gray-800 text-sm">\n'+
+        '                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+        '            </div>\n'+
+        '            <div class="absolute left-0 top-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-100"></div>\n'+
+        '            </div>\n'+
+        '\n'+
+        '            <div class="relative bg-gray-100 px-3 py-2 rounded-lg">\n'+
+        '            <div class="text-gray-800 text-sm">\n'+
+        '                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+        '            </div>\n'+
+        '            <div class="absolute top-0 left-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-100"></div>\n'+
+        '            </div>\n'+
+        '\n'+
+        '        </div>\n'+
 
-  let breadcrumbCompString =
-  '      <nav class="w-full rounded-md ' + breadcrumbState.selectedFont + '">\n'+
-  '        <div class="flex">\n'+
-  '          <div class="text-neutral-500">Breadcrumb 1</div>\n'+
-  '        </div>\n'+
-  '      </nav>\n'+
-  '\n'+
-  '      <nav class="w-full rounded-md ' + breadcrumbState.selectedFont + '">\n'+
-  '        <div class="flex">\n'+
-  '          <div>\n'+
-  '            <a href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900">\n'+
-  '              Breadcrumb 1\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-gray-400">></span>\n'+
-  '          </div>\n'+
-  '          <div class="text-neutral-500">Breadcrumb 2</div>\n'+
-  '        </div>\n'+
-  '      </nav>\n'+
-  '\n'+
-  '      <nav class="w-full rounded-md ' + breadcrumbState.selectedFont + '">\n'+
-  '        <div class="flex">\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900">\n'+
-  '              Breadcrumb 1\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-neutral-500">></span>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"\n'+
-  '            >\n'+
-  '              Breadcrumb 2\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-gray-400">></span>\n'+
-  '          </div>\n'+
-  '          <div class="text-gray-500">Breadcrumb 3</div>\n'+
-  '        </div>\n'+
-  '      </nav>\n'+
-  '\n'+
-  '      <nav class="w-full rounded-md ' + breadcrumbState.selectedFont + '">\n'+
-  '        <div class="divst-reset flex">\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"\n'+
-  '            >\n'+
-  '              Breadcrumb 1\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-neutral-500">></span>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"\n'+
-  '            >\n'+
-  '              Breadcrumb 2\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-gray-400">></span>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"\n'+
-  '            >\n'+
-  '              Breadcrumb 3\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-gray-400">></span>\n'+
-  '          </div>\n'+
-  '\n'+
-  '          <div class="text-gray-500">Breadcrumb 4</div>\n'+
-  '        </div>\n'+
-  '      </nav>\n'+
-  '\n'+
-  '      <nav class="w-full rounded-md ' + breadcrumbState.selectedFont + '">\n'+
-  '        <div class="flex">\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"\n'+
-  '            >\n'+
-  '              Breadcrumb 1\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-neutral-500">></span>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"\n'+
-  '            >\n'+
-  '              Breadcrumb 2\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-gray-400">></span>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"\n'+
-  '            >\n'+
-  '              Breadcrumb 3\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-gray-400">></span>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <a\n'+
-  '              href="#"\n'+
-  '              class="text-gray-900 transition duration-150 ease-in-out hover:text-gray-600 focus:text-gray-600 active:text-gray-900"\n'+
-  '            >\n'+
-  '              Breadcrumb 4\n'+
-  '            </a>\n'+
-  '          </div>\n'+
-  '          <div>\n'+
-  '            <span class="mx-2 text-gray-400">></span>\n'+
-  '          </div>\n'+
-  '          <div class="text-gray-500">Breadcrumb 5</div>\n'+
-  '        </div>\n'+
-  '      </nav>';
+        '<div class="flex space-x-8">\n'+
+        '            <div class="relative bg-gray-800 px-3 py-2 rounded-lg" style="filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));">\n'+
+        '            <div class="text-white text-sm">\n'+
+        '                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+        '            </div>\n'+
+        '            <div class="absolute right-0 rounded-[2px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>\n'+
+        '            </div>\n'+
+        '\n'+
+        '            <div class="relative bg-gray-800 px-3 py-2 rounded-lg" style="filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));">\n'+
+        '            <div class="text-white text-sm">\n'+
+        '            <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+        '            </div>\n'+
+        '            <div class="absolute bottom-0 left-1/2 rounded-[2px] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>\n'+
+        '            </div>\n'+
+        '\n'+
+        '            <div class="relative bg-gray-800 px-3 py-2 rounded-lg" style="filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));">\n'+
+        '            <div class="text-white text-sm">\n'+
+        '            <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+        '            </div>\n'+
+        '            <div class="absolute left-0 top-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>\n'+
+        '            </div>\n'+
+        '        \n'+
+        '            <div class="relative bg-gray-800 px-3 py-2 rounded-lg" style="filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));">\n'+
+        '            <div class="text-white text-sm">\n'+
+        '            <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+        '            </div>\n'+
+        '            <div class="absolute top-0 left-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-gray-800"></div>\n'+
+        '            </div>\n'+
+        '        </div>\n'+
 
-  return (
-    <>
-      <PreviewWindowDisabled
-        breadcrumbComp={breadcrumbComp}
-        breadcrumbCompString={breadcrumbCompString}
-        showColor={breadcrumbState.showColor}
-        selectedColor={breadcrumbState.selectedColor}
-        changeColor={changeColor} 
+        '<div class="flex space-x-8">\n'+
+'            <div class="relative bg-white px-3 py-2 rounded-lg" style="filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));">\n'+
+'                <div class="text-gray-900 text-sm">\n'+
+'                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+'                </div>\n'+
+'                <div class="absolute right-0 rounded-[2px] top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-white" ></div>\n'+
+'                </div>\n'+
+'\n'+
+'            <div class="relative bg-white px-3 py-2 rounded-lg" style="filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));">\n'+
+'                <div class="text-gray-900 text-sm">\n'+
+'                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+'                </div>\n'+
+'                <div class="absolute bottom-0 left-1/2 rounded-[2px] transform -translate-x-1/2 translate-y-1/2 rotate-45 w-2 h-2 bg-white"></div>\n'+
+'                </div>\n'+
+'\n'+
+'                <div class="relative bg-white px-3 py-2 rounded-lg" style="filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));">\n'+
+'                <div class="text-gray-900 text-sm">\n'+
+'                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+'                </div>\n'+
+'                <div class="absolute left-0 top-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-white"></div>\n'+
+'                </div>\n'+
+'\n'+
+'            <div class="relative bg-white px-3 py-2 rounded-lg" style="filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.1));">\n'+
+'                <div class="text-gray-900 text-sm">\n'+
+'                <div class="'+tooltipState.selectedFont+'">Tooltip</div>\n'+
+'                </div>\n'+
+'                <div class="absolute top-0 left-1/2 rounded-[2px] transform -translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-white"></div>\n'+
+'            </div>\n'+
+'        </div>';
+    
+                        
+    return(
+        <>
+            <PreviewWindowDisabled 
+            tooltipComp={tooltipComp} 
+            tooltipCompString={tooltipCompString}
+            showColor={tooltipState.showColor} 
+            selectedColor={tooltipState.selectedColor}
+            changeColor={changeColor} 
             changeFont={changeFont} 
-            toggleColor={toggleColor}
-      />
-    </>
-  )
+            toggleColor={toggleColor}/>
+        </>
+    )
 }
