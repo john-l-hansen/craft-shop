@@ -44,7 +44,7 @@ export default function DividerHorizontal(){
       </div>  
     )
 
-        let dividerHorizontalCompString = '<hr class="w-96 border border-gray-200"/>';
+        let dividerHorizontalCompString = '<hr class="w-96 border border-gray-200 dark:border-gray-7"/>';
                         
                         
     return(
