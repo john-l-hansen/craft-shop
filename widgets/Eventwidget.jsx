@@ -41,7 +41,7 @@ export default function Eventwidget(){
 
     let eventwidgetComp = (
         
-        <div className={"inline-block p-5 bg-gray-50 dark:text-white dark:bg-gray-900 rounded-[1.25rem] " + eventwidgetState.selectedFont}>
+        <div className={"inline-block p-5 bg-gray-50 rounded-[1.25rem] " + eventwidgetState.selectedFont}>
             <div>
                 <div className="flex">
                     <svg className="self-center mr-2" width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
