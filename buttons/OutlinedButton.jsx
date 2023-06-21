@@ -111,7 +111,7 @@ export default function OutlinedButton() {
                     <div className="ml-3">Actice</div>
                 </button>*/}
         <button
-          className="disabled:white ml-3 flex items-center justify-center rounded-lg border border-solid border-gray-300 py-2 px-6 text-sm font-medium leading-5 text-gray-300 dark:border-gray-900 dark:text-gray-700 "
+          className="disabled:white ml-3 flex items-center justify-center rounded-lg border border-solid border-gray-300 py-2 px-6 text-sm font-medium leading-5 text-gray-300 dark:border-gray-900 dark:text-gray-700 dark:disabled:text-gray-700"
           disabled
         >
           <div>
@@ -167,7 +167,7 @@ export default function OutlinedButton() {
                     </div>
                 </button>*/}
         <button
-          className="disabled:white ml-3 flex items-center justify-center rounded-lg border border-solid border-gray-300 py-2 px-6 text-sm font-medium leading-5 text-gray-300 dark:border-gray-900 dark:text-gray-700"
+          className="disabled:white ml-3 flex items-center justify-center rounded-lg border border-solid border-gray-300 py-2 px-6 text-sm font-medium leading-5 text-gray-300 dark:border-gray-900 dark:text-gray-700 dark:disabled:text-gray-700 "
           disabled
         >
           <div className="mr-3">Disabled</div>
