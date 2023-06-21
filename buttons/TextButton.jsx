@@ -61,7 +61,7 @@ export default function TextButton() {
                     Active
                 </button>*/}
         <button
-          className="disabled:white ml-3 rounded-lg py-2 px-6 text-sm font-medium leading-5 text-gray-300 dark:text-gray-200 disabled:dark:text-gray-700"
+          className="disabled:white ml-3 rounded-lg py-2 px-6 text-sm font-medium leading-5 text-gray-300 dark:text-gray-200 disabled:dark:text-gray-700 "
           disabled
         >
           Disabled
