@@ -36,7 +36,7 @@ export default function ButtonToggle() {
   }
 
   let buttonToggleCompString =
-    '<div class="flex justify-center items-center bg-white items-center">\n' +
+    '<div class="flex justify-center items-center bg-white">\n' +
     '<button class="py-2 px-6 flex justify-center items-center border border-solid border-gray-800 rounded-l-lg font-medium text-gray-800 bg-white focus:bg-gray-800 focus:text-white leading-5 text-sm ' +
     buttonToggleState.selectedFont +
     '">Selection</button>\n' +
