@@ -47,7 +47,7 @@ export default function Stacked(){
 
     let stackedComp = (
             
-                <div className="border border-gray-200 dark:border dark:border-gray-800 rounded-xl bg-white dark:bg-gray-900 " style={{"width":"348px", "height":"auto"}}>
+                <div className="border border-gray-200 dark:border dark:border-gray-800 rounded-xl bg-white dark:bg-black" style={{"width":"348px", "height":"auto"}}>
                     <div className="px-5 py-3 w-full flex justify-start items-center">
                         <div className="w-4/5 flex justify-start items-center">
                             <div>
@@ -58,10 +58,10 @@ export default function Stacked(){
                                 <p className={"p-0 m-0 font-normal text-sm leading-5 text-gray-700 dark:text-gray-100 " + stackedState.selectedFont}>Subheader</p>
                             </div>
                         </div>
-                        <div className="w-1/5 flex justify-end items-center text-gray-500 dark:text-gray-300">
+                        <div className="w-1/5 flex justify-end items-center">
                             <div>
-                            <svg class="fill-current" width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#"/>
+                            <svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#323232"/>
                             </svg>
                             </div>
                         </div>   
@@ -79,10 +79,10 @@ export default function Stacked(){
                             consectetur adipiscing elit, sed do eiusmod afasdfasfdddddd sectetur adipiscing elit, sed do eiusmod afasdfas</p>
                         </div>
                         <div className="flex justify-end">
-                        <button className={"flex items-center justify-center rounded-lg border border-solid border-gray-800 px-6 py-2 font-lato text-sm font-medium leading-5 text-gray-800 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-200 dark:border-gray-200 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:bg-gray-900 dark:active:bg-gray-700 " + stackedState.selectedFont}>
+                        <button className={"py-2 px-6 flex justify-center items-center border border-solid border-gray-800 rounded-lg font-medium text-gray-800 hover:bg-gray-100 focus:bg-gray-100 active:bg-gray-200 leading-5 text-sm " + stackedState.selectedFont}>
                             Cancel
                         </button>
-                        <button className={"ml-3 flex items-center justify-center rounded-lg bg-gray-500 px-6 py-2 font-lato text-sm font-medium leading-5 text-white dark:text-black hover:bg-gray-500 focus:bg-gray-500 active:bg-gray-300 dark:bg-gray-200 dark:hover:bg-gray-600 dark:focus:bg-gray-00 dark:active:bg-gray-300 " + stackedState.selectedColor +" "+ stackedState.selectedFont}>
+                        <button className={"ml-3 py-2 px-6 flex justify-center items-center rounded-lg font-medium leading-5 text-sm text-white " + stackedState.selectedColor +" "+ stackedState.selectedFont}>
                             Enabled
                         </button>
                         </div>
