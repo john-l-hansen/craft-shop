@@ -36,7 +36,7 @@ export default function ButtonToggleLarge() {
   }
 
   let buttonToggleLargeCompString =
-    '<div class="flex justify-center items-center bg-white items-center">\n' +
+    '<div class="flex justify-center bg-white items-center">\n' +
     '                <button class="py-4 px-8 flex justify-center items-center border border-solid border-gray-300 rounded-l-lg font-medium text-gray-800 bg-white focus:border-gray-800">\n' +
     '                    <div>\n' +
     '                        <svg width="31" height="28" viewBox="0 0 31 28" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
