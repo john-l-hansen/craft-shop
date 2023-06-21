@@ -47,12 +47,12 @@ export default function Badge(){
     let badgeComp = (
             
       <div className="flex flex-col justify-center items-center">
-        <div className={"w-3 h-3 rounded-full dark:bg-gray-900 " + badgeState.selectedColor} style={{"marginBottom":"20px"}}>
+        <div className={"w-3 h-3 rounded-full " + badgeState.selectedColor} style={{"marginBottom":"20px"}}>
         </div>
-        <div className={"w-6 h-6 flex justify-center items-center text-white rounded-full dark:bg-gray-900 " + badgeState.selectedColor + " " + badgeState.selectedFont} style={{"marginBottom":"20px"}}>
+        <div className={"w-6 h-6 flex justify-center items-center text-white rounded-full " + badgeState.selectedColor + " " + badgeState.selectedFont} style={{"marginBottom":"20px"}}>
             3
         </div>
-        <div className={"w-10 h-6 flex justify-center items-center text-white rounded-full dark:bg-gray-900 " + badgeState.selectedColor + " " + badgeState.selectedFont}>
+        <div className={"w-10 h-6 flex justify-center items-center text-white rounded-full " + badgeState.selectedColor + " " + badgeState.selectedFont}>
             32
         </div>
       </div>
